@@ -1,3 +1,4 @@
+function TABLE()
 Items={  [1] = {
     ['parent_name'] = List .. '🐕 DOG SKILLS' ,
     ['item_menu_name'] = '🐕 DOG SKILLS 🐕',
@@ -4252,3 +4253,5 @@ Items={  [1] = {
     },
   },
 }
+end
+TABLE()
