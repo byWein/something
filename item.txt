@@ -1,4 +1,3 @@
-Items = {
   [1] = {
     ['parent_name'] = List .. '🐕 DOG SKILLS' ,
     ['item_menu_name'] = '🐕 DOG SKILLS 🐕',
@@ -4251,5 +4250,4 @@ Items = {
       ['item_region'] = gg.REGION_ANONYMOUS ,
       ['item_type'] = gg.TYPE_BYTE ,
     },
-  },
-}
+  }
