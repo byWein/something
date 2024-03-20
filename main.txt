@@ -738,17 +738,7 @@ elseif process_alert == 1 then EXIT()
 end end end
 --====END CHECK_PROCESS ===
 ---==== CHECK SCRIPT NAME ======
-function ANTI_RENAME()
-gg.setVisible(false)
-BG = 15
-if gg.getFile():match('[^/]+$') == 'AUTOSTASH_v'..Ver..'_LDOE.lua' then
-PROCESS_ALERT()
-else ---===ANTI_RENAME ELSE===
-  renameblock = gg.alert('⚠️ Rename Attempt Detected ⚠️\n\n❕️Please change the name back to the original one.\n\n💡 If you have a better name suggestion contact us:\n - Telegram: t.me\\WeinHacks\n - Telegram channel: t.me\\agasatriya1\n\nmade with 💙 by Wein®', '\n⛔️ Exit')
-if renameblock == nil then
-elseif renameblock == 1 then
-end end end
-ANTI_RENAME()
+
 
 function CURRENT_TAB()
 if BG == 0 then PROCESS_ALERT()
