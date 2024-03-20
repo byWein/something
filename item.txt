@@ -1,3 +1,21 @@
+function TABLES(List,Sub,Fold)
+Main_menu_table = {
+  [1] = {['option_name'] = List .. '1️⃣  STEP ONE 👉 POINTING 👈'
+  },
+  [2] = {['option_name'] = List .. '2️⃣  STEP TWO ♻️ REPLACEMENT ♻️'
+  },
+  [3] = {['option_name'] = List .. '🅰️  AUTO STASH️'
+  },
+  [4] = {['option_name'] = List .. '🛠  FIX STASH MAKING PACK'
+  },
+  [5] = {['option_name'] = List .. '🐶  1 COIN PUPPY GROW'
+  },
+  [6] = {['option_name'] = List .. '⚙️ OPTIONS'
+  },
+  [7] = {['option_name'] = '\n❕️ ABOUT THIS SCRIPT'
+  },
+}
+Items = {
   [1] = {
     ['parent_name'] = List .. '🐕 DOG SKILLS' ,
     ['item_menu_name'] = '🐕 DOG SKILLS 🐕',
@@ -484,7 +502,7 @@
       ['item_region'] = gg.REGION_ANONYMOUS ,
       ['item_type'] = gg.TYPE_BYTE ,
     },
-  },
+  }, --skill
   [2] = {
     ['parent_name'] = List .. '🐶 DOGS & TRAITS' ,
     ['item_menu_name'] = '🐶 DOGS & TRAITS 🐶',
@@ -682,7 +700,7 @@
       ['item_region'] = gg.REGION_ANONYMOUS ,
       ['item_type'] = gg.TYPE_BYTE ,
     },
-  },
+  }, --dogs and traits
   [3] = {
     ['parent_name'] = List .. '👔 WARDROBE' ,
     ['item_menu_name'] = '👔 WARDROBE 👔',
@@ -1535,7 +1553,7 @@
         ['item_type'] = gg.TYPE_BYTE ,
       },
     },
-  },
+  }, -- wardrobe
   [4] = {
     ['parent_name'] = List .. '📜 BLUEPRINTS (WEAPON)' ,
     ['item_menu_name'] = '📜 BLUEPRINTS (WEAPON) 📜',
@@ -3224,33 +3242,11 @@
         ['item_type'] = gg.TYPE_BYTE ,
       },
     },
-  },
+  }, -- blueprints
   [5] = {
     ['parent_name'] = List .. '🛵 CHOPPER SKINS' ,
     ['item_menu_name'] = '🛵 CHOPPER SKINS 🛵',
     [1] = {
-      ['item_name'] = List .. Fold ..'RARE',
-      ['sub_item_menu_name'] = Fold ..'RARE',
-      ['is_sub'] = 'true',
-      [1] = {
-        ['item_name'] = List .. Sub .. 'METAL POINTER',
-        ['item_code'] = "Q000000\"spr_pntr_sh_mtl\" 0000",
-        ['item_region'] = gg.REGION_ANONYMOUS ,
-        ['item_type'] = gg.TYPE_BYTE ,
-      },
-    },
-    [2] = {
-      ['item_name'] = List .. Fold ..'VERRY RARE',
-      ['sub_item_menu_name'] = Fold ..'RARE',
-      ['is_sub'] = 'true',
-      [1] = {
-        ['item_name'] = List .. Sub .. 'METAL POINTER',
-        ['item_code'] = "Q000000\"spr_pntr_sh_mtl\" 0000",
-        ['item_region'] = gg.REGION_ANONYMOUS ,
-        ['item_type'] = gg.TYPE_BYTE ,
-      },
-    },
-    [3] = {
       ['item_name'] = List .. Fold ..'EXTREMLY RARE',
       ['sub_item_menu_name'] = Fold ..'EXTREMLY RARE',
       ['is_sub'] = 'true',
@@ -3518,9 +3514,630 @@
         ['item_region'] = gg.REGION_ANONYMOUS ,
         ['item_type'] = gg.TYPE_BYTE ,
       },
+    }, -- extremly rare
+    [2] = {
+      ['item_name'] = List .. Fold ..'VERY RARE',
+      ['sub_item_menu_name'] = Fold ..'VERY RARE',
+      ['is_sub'] = 'true',
+      [2] = {
+        ['item_name'] = List .. Sub .. 'VIPER BLUE',
+        ['item_code'] = "Q000000\"bikeskin_vmaxblue\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [3] = {
+        ['item_name'] = List .. Sub .. 'VIPER RAINBOW',
+        ['item_code'] = "Q000000\"bikeskin_vmaxrainbow\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [4] = {
+        ['item_name'] = List .. Sub .. 'VIPER YELLOW',
+        ['item_code'] = "Q000000\"bikeskin_vmaxyellow\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [5] = {
+        ['item_name'] = List .. Sub .. 'POLICE BIKE',
+        ['item_code'] = "Q000000\"bikeskin_police\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [6] = {
+        ['item_name'] = List .. Sub .. 'OFF-ROAD BIKE',
+        ['item_code'] = "Q000000\"bikeskin_offroad\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [7] = {
+        ['item_name'] = List .. Sub .. 'THE LUCKY ONE',
+        ['item_code'] = "Q000000\"bikeskin_casino\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [8] = {
+        ['item_name'] = List .. Sub .. 'ENDURO',
+        ['item_code'] = "Q000000\"bikeskin_cross\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [9] = {
+        ['item_name'] = List .. Sub .. 'BAYOU',
+        ['item_code'] = "Q000000\"bikeskin_swamp\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [10] = {
+        ['item_name'] = List .. Sub .. 'ICE CREAM CART',
+        ['item_code'] = "Q000000\"bikeskin_icecream\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [11] = {
+        ['item_name'] = List .. Sub .. 'RICKSHAW',
+        ['item_code'] = "Q000000\"bikeskin_riksha\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [12] = {
+        ['item_name'] = List .. Sub .. 'ROADRUNNER',
+        ['item_code'] = "Q000000\"bikeskin_roadrunner\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [13] = {
+        ['item_name'] = List .. Sub .. 'FARMER',
+        ['item_code'] = "Q000000\"bikeskin_ant\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [14] = {
+        ['item_name'] = List .. Sub .. 'IRON WARRIOR',
+        ['item_code'] = "Q000000\"bikeskin_rusty\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [15] = {
+        ['item_name'] = List .. Sub .. 'PHANTOM',
+        ['item_code'] = "Q000000\"bikeskin_phantom\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [16] = {
+        ['item_name'] = List .. Sub .. 'CAKE',
+        ['item_code'] = "Q000000\"bikeskin_birthday_2020\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [17] = {
+        ['item_name'] = List .. Sub .. 'SAVAGE',
+        ['item_code'] = "Q000000\"bikeskin_savager\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [18] = {
+        ['item_name'] = List .. Sub .. 'TIGER',
+        ['item_code'] = "Q000000\"bikeskin_tiger\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [19] = {
+        ['item_name'] = List .. Sub .. 'GENESIS',
+        ['item_code'] = "Q000000\"bikeskin_sport\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [20] = {
+        ['item_name'] = List .. Sub .. 'COMMANDER',
+        ['item_code'] = "Q000000\"bikeskin_khaki\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [21] = {
+        ['item_name'] = List .. Sub .. 'VOYAGE',
+        ['item_code'] = "Q000000\"bikeskin_scrambler\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [22] = {
+        ['item_name'] = List .. Sub .. 'INTERCEPTOR',
+        ['item_code'] = "Q000000\"bikeskin_sportdark\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [23] = {
+        ['item_name'] = List .. Sub .. 'CHIEF',
+        ['item_code'] = "Q000000\"bikeskin_master\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [24] = {
+        ['item_name'] = List .. Sub .. 'RONIN',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [25] = {
+        ['item_name'] = List .. Sub .. 'SOBOTEUR',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [26] = {
+        ['item_name'] = List .. Sub .. 'TRANQUILITY',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [27] = {
+        ['item_name'] = List .. Sub .. 'TSUNAMI',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [28] = {
+        ['item_name'] = List .. Sub .. 'CAMO',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [29] = {
+        ['item_name'] = List .. Sub .. 'DEER HUNTER',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [30] = {
+        ['item_name'] = List .. Sub .. 'DRIFTER',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [31] = {
+        ['item_name'] = List .. Sub .. 'OLD SCHOOL',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [32] = {
+        ['item_name'] = List .. Sub .. 'HORNET',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [33] = {
+        ['item_name'] = List .. Sub .. 'POLARIS',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [34] = {
+        ['item_name'] = List .. Sub .. 'CATCHER',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [35] = {
+        ['item_name'] = List .. Sub .. 'PILIGRIM',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [36] = {
+        ['item_name'] = List .. Sub .. 'PRIMAVERA',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [37] = {
+        ['item_name'] = List .. Sub .. 'KINETIK',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [38] = {
+        ['item_name'] = List .. Sub .. 'MINT',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [39] = {
+        ['item_name'] = List .. Sub .. 'BUMBLEBEE',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [40] = {
+        ['item_name'] = List .. Sub .. 'PEARL',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [41] = {
+        ['item_name'] = List .. Sub .. 'SYMBIOSIS',
+        ['item_code'] = "Q000000\"bikeskin_painted_symbiosis\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [42] = {
+        ['item_name'] = List .. Sub .. 'BARRACUDA',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [43] = {
+        ['item_name'] = List .. Sub .. 'FADE',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [44] = {
+        ['item_name'] = List .. Sub .. 'FLUFFY',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [45] = {
+        ['item_name'] = List .. Sub .. 'SHADOW',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [46] = {
+        ['item_name'] = List .. Sub .. 'MENTHOL',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [47] = {
+        ['item_name'] = List .. Sub .. 'SIRIUS',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [48] = {
+        ['item_name'] = List .. Sub .. 'REINDEER',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [49] = {
+        ['item_name'] = List .. Sub .. 'JAWS',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [50] = {
+        ['item_name'] = List .. Sub .. 'HERMIT',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [51] = {
+        ['item_name'] = List .. Sub .. 'WASTELAND CONQUEROR',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [52] = {
+        ['item_name'] = List .. Sub .. 'POINEER',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [53] = {
+        ['item_name'] = List .. Sub .. 'NOMAD',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [54] = {
+        ['item_name'] = List .. Sub .. 'NORTH CONQUEROR',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [55] = {
+        ['item_name'] = List .. Sub .. 'DRAGON\'S WING',
+        ['item_code'] = "Q000000\"bikeskin_dragon\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
     },
-  },
+  }, -- chopper skin
   [6] = {
+    ['parent_name'] = List .. '🪅 SEASON REWARDS',
+    ['item_menu_name'] = '🪅 SEASON REWARDS 🪅',
+    [1] = {
+      ['item_name'] = List .. Sub .. 'FLOWER IN A POT',
+      ['item_code'] = "Q000000\"furniture_birthday_hand_decoration\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [2] = {
+      ['item_name'] = List .. Sub .. 'INFECTED SPECIMEN',
+      ['item_code'] = "Q000000\"furniture_infected_specimen\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [3] = {
+      ['item_name'] = List .. Sub .. 'SCARECROW',
+      ['item_code'] = "Q000000\"furniture_halloween_scarecrow\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [4] = {
+      ['item_name'] = List .. Sub .. 'SPOOKY PUMPKINS',
+      ['item_code'] = "Q000000\"furniture_halloween_pumpkin_box\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [5] = {
+      ['item_name'] = List .. Sub .. 'JACK-O\'-LANTERN',
+      ['item_code'] = "Q000000\"furniture_halloween_pumpkin_candles\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [6] = {
+      ['item_name'] = List .. Sub .. 'FIREPLACE',
+      ['item_code'] = "Q000000\"furniture_beatson\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [7] = {
+      ['item_name'] = List .. Sub .. 'WOODEN DEER',
+      ['item_code'] = "Q000000\"furniture_christmas_deer\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [8] = {
+      ['item_name'] = List .. Sub .. 'SNOW GLOBE',
+      ['item_code'] = "Q000000\"furniture_christmas_snowball\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [9] = {
+      ['item_name'] = List .. Sub .. 'SNOWMAN',
+      ['item_code'] = "Q000000\"furniture_christmas_snowman\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [10] = {
+      ['item_name'] = List .. Sub .. 'SPRING FLOWER GARDEN',
+      ['item_code'] = "Q000000\"furniture_8_march_garden_bike\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [11] = {
+      ['item_name'] = List .. Sub .. 'SPRING ARMCHAIR',
+      ['item_code'] = "Q000000\"furniture_8_march_garden_chair\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [12] = {
+      ['item_name'] = List .. Sub .. 'SPRING FLOWERBED',
+      ['item_code'] = "Q000000\"furniture_8_march_garden_fence\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [13] = {
+      ['item_name'] = List .. Sub .. 'CRATER MODEL',
+      ['item_code'] = "Q000000\"furniture_crater_model\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [14] = {
+      ['item_name'] = List .. Sub .. 'HOLOGRAM',
+      ['item_code'] = "Q000000\"furniture_holoprojector\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [15] = {
+      ['item_name'] = List .. Sub .. 'BARBELL',
+      ['item_code'] = "Q000000\"furniture_barbell\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [16] = {
+      ['item_name'] = List .. Sub .. 'GRAVESTONE',
+      ['item_code'] = "Q000000\"furniture_candy_grave\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [17] = {
+      ['item_name'] = List .. Sub .. 'BASKETBALL HOOP',
+      ['item_code'] = "Q000000\"furniture_basketball_hoop\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [18] = {
+      ['item_name'] = List .. Sub .. 'BIG CATCH',
+      ['item_code'] = "Q000000\"furniture_fishsign\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [19] = {
+      ['item_name'] = List .. Sub .. 'LAST STOP',
+      ['item_code'] = "Q000000\"furniture_anchor\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [20] = {
+      ['item_name'] = List .. Sub .. 'GILBERT',
+      ['item_code'] = "Q000000\"furniture_spore_lab\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [21] = {
+      ['item_name'] = List .. Sub .. 'COMFORT',
+      ['item_code'] = "Q000000\"furniture_suspended_chair\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [22] = {
+      ['item_name'] = List .. Sub .. 'ACQUIRED TASTE',
+      ['item_code'] = "Q000000\"bbq_steak_workbench\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [23] = {
+      ['item_name'] = List .. Sub .. 'TURBO',
+      ['item_code'] = "Q000000\"furniture_turbo\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [24] = {
+      ['item_name'] = List .. Sub .. 'SURF\'S UP',
+      ['item_code'] = "Q000000\"furniture_surfboard\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [25] = {
+      ['item_name'] = List .. Sub .. 'RITUAL',
+      ['item_code'] = "Q000000\"furniture_antler_torch\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [26] = {
+      ['item_name'] = List .. Sub .. 'ECHO',
+      ['item_code'] = "Q000000\"furniture_extractor\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [27] = {
+      ['item_name'] = List .. Sub .. 'BREAK',
+      ['item_code'] = "Q000000\"furniture_rocking_chair\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [28] = {
+      ['item_name'] = List .. Sub .. 'KRUMPY',
+      ['item_code'] = "Q000000\"furniture_krumpy\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [29] = {
+      ['item_name'] = List .. Sub .. 'FESTIVE ARCH',
+      ['item_code'] = "Q000000\"furniture_festive_arch\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [30] = {
+      ['item_name'] = List .. Sub .. 'BRAIN FREEZE',
+      ['item_code'] = "Q000000\"furniture_brain_freeze\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [31] = {
+      ['item_name'] = List .. Sub .. 'TREADMILL',
+      ['item_code'] = "Q000000\"furniture_treadmill\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [32] = {
+      ['item_name'] = List .. Sub .. 'WINDVANE',
+      ['item_code'] = "Q000000\"furniture_windvane\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [33] = {
+      ['item_name'] = List .. Sub .. 'PAGODA',
+      ['item_code'] = "Q000000\"furniture_chinese_summer_house\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [34] = {
+      ['item_name'] = List .. Sub .. 'TRAFIC LIGHTS',
+      ['item_code'] = "Q000000\"furniture_traffic_lights\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [35] = {
+      ['item_name'] = List .. Sub .. 'CROSSING',
+      ['item_code'] = "Q000000\"furniture_crossing\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [36] = {
+      ['item_name'] = List .. Sub .. 'BEATSON',
+      ['item_code'] = "Q000000\"furniture_beatson\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [37] = {
+      ['item_name'] = List .. Sub .. 'BIRD BOX',
+      ['item_code'] = "Q000000\"furniture_bird_box\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [38] = {
+      ['item_name'] = List .. Sub .. 'CHAIR \"OUTBACK\"',
+      ['item_code'] = "Q000000\"furniture_outback\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [39] = {
+      ['item_name'] = List .. Sub .. 'WORK TABLE',
+      ['item_code'] = "Q000000\"furniture_work_table\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [40] = {
+      ['item_name'] = List .. Sub .. 'AVOCADO',
+      ['item_code'] = "Q000000\"furniture_avocado\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [41] = {
+      ['item_name'] = List .. Sub .. 'URSA MAJOR',
+      ['item_code'] = "Q000000\"furniture_ursa_major\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [42] = {
+      ['item_name'] = List .. Sub .. 'CRATE WITH FIREWORKS',
+      ['item_code'] = "Q000000\"furniture_new_year_2023_fireworks\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [43] = {
+      ['item_name'] = List .. Sub .. 'ANTIQUE TABLE',
+      ['item_code'] = "Q000000\"furniture_coffee_table\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [44] = {
+      ['item_name'] = List .. Sub .. 'DRAW-WELL',
+      ['item_code'] = "Q000000\"furniture_old_well\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [45] = {
+      ['item_name'] = List .. Sub .. 'STOP ZOMBIES',
+      ['item_code'] = "Q000000\"ldoe_6_decor_gift\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [46] = {
+      ['item_name'] = List .. Sub .. 'SPIRIT ANIMAL',
+      ['item_code'] = "Q000000\"furniture_antler_scarecrow\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [47] = {
+      ['item_name'] = List .. Sub .. 'BROKEN SLOT MACHINE',
+      ['item_code'] = "Q000000\"furniture_hacked_slot_machine\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [48] = {
+      ['item_name'] = List .. Sub .. 'CARROT DISPENSER',
+      ['item_code'] = "Q000000\"furniture_carrot_vending_machine\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+  }, -- decoration
+  [7] = {
     ['parent_name'] = List .. '🎁 PACKS & CRATES' ,
     ['item_menu_name'] = '🎁 PACKS & CRATES 🎁',
     [1] = {
@@ -3554,7 +4171,70 @@
       ['item_type'] = gg.TYPE_BYTE ,
     },
   },
-  [7] = {
+  [8] = {
+    ['parent_name'] = List .. '🎵 VYNIL RECORDS & GRAMOPHONE',
+    ['item_menu_name'] = '🎵 VYNIL RECORDS & GRAMOPHONE 🎵',
+    [1] = {
+      ['item_name'] = List .. Sub .. 'GRAMOPHONE',
+      ['item_code'] = "Q000000\"furniture_gramophone\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [2] = {
+      ['item_name'] = List .. Fold ..'VYNIL RECORDS',
+      ['sub_item_menu_name'] = Fold ..'VYNIL RECORDS',
+      ['is_sub'] = 'true',
+      [1] = {
+        ['item_name'] = List .. Sub .. 'ABANDONED MOTEL',
+        ['item_code'] = "Q000000\"gramophone_music_motel\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [2] = {
+        ['item_name'] = List .. Sub .. 'MAYHEM AT THE FAIR',
+        ['item_code'] = "Q000000\"gramophone_music_fair\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [3] = {
+        ['item_name'] = List .. Sub .. 'PORT BREEZE',
+        ['item_code'] = "Q000000\"gramophone_music_port\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [4] = {
+        ['item_name'] = List .. Sub .. 'TRANSPORT HUB',
+        ['item_code'] = "Q000000\"gramophone_music_transport_hub\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [5] = {
+        ['item_name'] = List .. Sub .. 'ALL ROADS LEAD TO THE COMMUNE',
+        ['item_code'] = "Q000000\"gramophone_music_commune\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [6] = {
+        ['item_name'] = List .. Sub .. 'TRIAL IN THE COMMUNE',
+        ['item_code'] = "Q000000\"gramophone_music_commune_battle\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [7] = {
+        ['item_name'] = List .. Sub .. 'SAMHAIN',
+        ['item_code'] = "Q000000\"gramophone_music_halloween_commune\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+      [8] = {
+        ['item_name'] = List .. Sub .. 'A SONG OF SUN AND MOON',
+        ['item_code'] = "Q000000\"gramophone_music_chinese_2024\" 0000",
+        ['item_region'] = gg.REGION_ANONYMOUS ,
+        ['item_type'] = gg.TYPE_BYTE ,
+      },
+    },
+  },
+  [9] = {
     ['parent_name'] = List .. '🍔 FOOD & BEVERAGE',
     ['item_menu_name'] = '🍔 FOOD & BEVERAGE 🍔',
     [1] = {
@@ -3647,8 +4327,32 @@
       ['item_region'] = gg.REGION_ANONYMOUS ,
       ['item_type'] = gg.TYPE_BYTE ,
     },
+    [16] = {
+      ['item_name'] = List .. Sub .. 'CORN',
+      ['item_code'] = "Q000000\"corn\"0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [17] = {
+      ['item_name'] = List .. Sub .. 'SPICES',
+      ['item_code'] = "Q000000\"food_spices\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [18] = {
+      ['item_name'] = List .. Sub .. 'CHAMPAGNE',
+      ['item_code'] = "Q000000\"food_champagne\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [19] = {
+      ['item_name'] = List .. Sub .. 'ENERGY DRINK',
+      ['item_code'] = "Q000000\"food_energy_drink\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
   },
-  [8] = {
+  [10] = {
     ['parent_name'] = List .. '🌾 PLANTS AND SEEDS',
     ['item_menu_name'] = '🌾 PLANTS AND SEEDS 🌾',
     [1] = {
@@ -3687,8 +4391,20 @@
       ['item_region'] = gg.REGION_ANONYMOUS ,
       ['item_type'] = gg.TYPE_BYTE ,
     },
+    [7] = {
+      ['item_name'] = List .. Sub .. 'SPIREA',
+      ['item_code'] = "Q000000\"furniture_decoration_spirea\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
+    [8] = {
+      ['item_name'] = List .. Sub .. 'HEDGE',
+      ['item_code'] = "Q000000\"furniture_decoration_hedge\" 0000",
+      ['item_region'] = gg.REGION_ANONYMOUS ,
+      ['item_type'] = gg.TYPE_BYTE ,
+    },
   },
-  [9] = {
+  [10] = {
     ['parent_name'] = List .. '🌲WOOD',
     ['item_menu_name'] = '🌲 WOOD 🌲',
     [1] = {
@@ -3728,7 +4444,7 @@
       ['item_type'] = gg.TYPE_BYTE ,
     },
   },
-  [10] = {
+  [11] = {
     ['parent_name'] = List .. '🗿 STONES & BRICKS',
     ['item_menu_name'] = '🗿 STONES & BRICKS 🗿',
     [1] = {
@@ -3750,7 +4466,7 @@
       ['item_type'] = gg.TYPE_BYTE ,
     },
   },
-  [11] = {
+  [12] = {
     ['parent_name'] = List .. '🧲 METALS',
     ['item_menu_name'] = '🧲 METALS 🧲',
     [1] = {
@@ -3862,7 +4578,7 @@
       ['item_type'] = gg.TYPE_BYTE ,
     },
   },
-  [12] = {
+  [13] = {
     ['parent_name'] = List .. '🧵 LEATHER & FABRICS',
     ['item_menu_name'] = '🧵 LEATHER & FABRICS 🧵',
     [1] = {
@@ -3914,7 +4630,7 @@
       ['item_type'] = gg.TYPE_BYTE ,
     },
   },
-  [13] = {
+  [14] = {
     ['parent_name'] = List .. '⚙️ SPARE PARTS ',
     ['item_menu_name'] = '⚙️ SPARE PARTS ⚙️',
     [1] = {
@@ -3936,7 +4652,7 @@
       ['item_type'] = gg.TYPE_BYTE ,
     },
   },
-  [14] = {
+  [15] = {
     ['parent_name'] = List .. '🔌 ELECTRONICS',
     ['item_menu_name'] = '🔌 ELECTRONICS 🔌',
     [1] = {
@@ -3958,7 +4674,7 @@
       ['item_type'] = gg.TYPE_BYTE ,
     },
   },
-  [15] = {
+  [16] = {
     ['parent_name'] = List .. '💊 MEDICINES',
     ['item_menu_name'] = '💊 MEDICINES 💊',
     [1] = {
@@ -3992,7 +4708,7 @@
       ['item_type'] = gg.TYPE_BYTE ,
     },
   },
-  [16] = {
+  [17] = {
     ['parent_name'] = List .. '🔫 FIRE WEAPONS',
     ['item_menu_name'] = '🔫 FIRE WEAPONS 🔫',
     [1] = {
@@ -4008,7 +4724,7 @@
       ['item_type'] = gg.TYPE_BYTE ,
     },
   },
-  [17] = {
+  [18] = {
     ['parent_name'] = List .. '🗡 MELEE WEAPONS',
     ['item_menu_name'] = '🗡 MELEE WEAPONS 🗡',
     [1] = {
@@ -4024,7 +4740,7 @@
       ['item_type'] = gg.TYPE_BYTE ,
     },
   },
-  [18] = {
+  [19] = {
     ['parent_name'] = List .. '💣 BOMBS & EXPLOSIVES' ,
     ['item_menu_name'] = '💣 BOMBS & EXPLOSIVES 💣',
     [1] = {
@@ -4058,7 +4774,7 @@
       ['item_type'] = gg.TYPE_BYTE ,
     },
   },
-  [19] = {
+  [20] = {
     ['parent_name'] = List .. ' 🛡 ARMOR & PROTECTION' ,
     ['item_menu_name'] = '🛡 ARMOR & PROTECTION 🛡',
 
@@ -4135,7 +4851,7 @@
       ['item_type'] = gg.TYPE_BYTE ,
     },
   },
-  [20] = {
+  [21] = {
     ['parent_name'] = List .. '🗄 CHESTS & STORAGE' ,
     ['item_menu_name'] = '🗄 CHESTS & STORAGE 🗄',
     [1] = {
@@ -4229,7 +4945,7 @@
       ['item_type'] = gg.TYPE_BYTE ,
     },
   },
-  [21] = {
+  [22] = {
     ['parent_name'] = List .. '🗑 JUNK & TRASH' ,
     ['item_menu_name'] = '🗑 JUNK & TRASH 🗑',
     [1] = {
@@ -4250,4 +4966,7 @@
       ['item_region'] = gg.REGION_ANONYMOUS ,
       ['item_type'] = gg.TYPE_BYTE ,
     },
-  }
+  },
+}
+end
+TABLES(List,Sub,Fold)
