@@ -10,7 +10,7 @@ Features = '- All season decorations added.\n- All extremly rare bike skins adde
 check = gg.getTargetInfo()
 --=======
 ---==== END ABOUT FUNCTION ====
-List = '⏺️    ' Sub = '🔹️ 'Fold = '📂 '
+
 
 
 
