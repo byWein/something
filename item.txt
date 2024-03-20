@@ -1,3 +1,4 @@
+List = '⏺️    ' Sub = '🔹️ 'Fold = '📂 '
 function TABLES(List,Sub,Fold)
 Main_menu_table = {
   [1] = {['option_name'] = List .. '1️⃣  STEP ONE 👉 POINTING 👈'
