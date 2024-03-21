@@ -5255,12 +5255,14 @@ end
 
 
 function MAIN_MENU()
+List = '⏺️    ' Sub = '🔹️ 'Fold = '📂 '
+TABLES(List,Sub,Fold)
 gg.toast('📋 MAIN MENU 📋')
 Option_name = {}
 for i , v in pairs(Main_menu_table) do
 Option_name[i] = v.option_name
 end
-BG = 2
+BG = 17
 Option_name[#Option_name - #Option_name] = '⛔️ EXIT'
 main_menu = gg.choice(Option_name , nil,'📋 MAIN MENU 📋')
 if main_menu == nil then
@@ -5593,7 +5595,7 @@ end
 function ABOUT_SCRIPT()
 gg.toast('🅰️  AUTO STASH '..Ver..' 🅰️',true)
 gg.setVisible(false)
-BG = 1
+BG = 15
 if tonumber(RD) < Expiry_date then
 License = true
 License_info = 'License: 🟩 Valid until '..Ex_D..' ( '..Days_left..' Days remaining )'
@@ -5675,13 +5677,10 @@ H_VR()
 
 
 function CURRENT_TAB()
-if BG == 0 then PROCESS_ALERT()
+if BG == 15 then ABOUT_SCRIPT()
 gg.toast('🙈 Hidden 🙈')
 elseif
-  BG == 1 then ABOUT_SCRIPT()
-gg.toast('🙈 Hidden 🙈')
-elseif
-  BG == 2 then MAIN_MENU()
+  BG == 17 then MAIN_MENU()
 gg.toast('🙈 Hidden 🙈',true)
 elseif
   BG == 3 then POINT_REPLACE()
@@ -5720,13 +5719,7 @@ elseif
   BG == 14 then NO_POINTING()
 gg.toast('🙈 Hidden 🙈')
 elseif
-  BG == 15 then ANTI_RENAME()
-gg.toast('🙈 Hidden 🙈')
-elseif
   BG == 16 then OPTIONS_MENU()
-gg.toast('🙈 Hidden 🙈')
-elseif
-  BG == 17 then NO_INTERNET()
 gg.toast('🙈 Hidden 🙈')
 elseif
   BG == 18 then H_VR()
