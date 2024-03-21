@@ -27,7 +27,7 @@ check = gg.getTargetInfo()
 ---==== END ABOUT FUNCTION ====
 
 List = '⏺️    ' Sub = '🔹️ 'Fold = '📂 '
-function TABLES(List,Sub,Fold)
+
 Main_menu_table = {
   [1] = {['option_name'] = List .. '1️⃣  STEP ONE 👉 POINTING 👈'
   },
@@ -44,6 +44,7 @@ Main_menu_table = {
   [7] = {['option_name'] = '\n❕️ ABOUT THIS SCRIPT'
   },
 }
+function TABLES(List,Sub,Fold)
 Items = {
   [1] = {
     ['parent_name'] = List .. '🐕 DOG SKILLS' ,
