@@ -1,4 +1,18 @@
+AD = gg.makeRequest("http://worldtimeapi.org").content
 
+Expiry_date = tonumber(PS)
+RD = string.gsub(string.sub(AD,string.find(AD,"%d%d%d%d%-%d%d%-%d%d")),"-","")
+Yr = string.sub(RD,1,4)
+Mn = string.sub(RD,5,6)
+Dy = string.sub(RD,7,8)
+DT = string.format("%02d / %02d / %04d",Mn,Dy,Yr)
+--======GET REMAINIG DAYS======
+EYr = string.sub(Expiry_date,1,4)
+EMn = string.sub(Expiry_date,5,6)
+EDy = string.sub(Expiry_date,7,8)
+Ex_D = string.format("%02d/%02d/%04d",EMn,EDy,EYr)
+DC = Expiry_date - tonumber(RD)
+if DC <= 0 then Days_left = 0 else Days_left = DC end
 
 
 Release_date = '03/17/2024'
