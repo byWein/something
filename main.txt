@@ -1,4 +1,4 @@
-AD = gg.makeRequest("http://worldtimeapi.org").content
+
 
 Expiry_date = tonumber(PS)
 RD = string.gsub(string.sub(AD,string.find(AD,"%d%d%d%d%-%d%d%-%d%d")),"-","")
