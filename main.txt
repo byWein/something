@@ -818,9 +818,6 @@ elseif
   BG == 14 then NO_POINTING()
 gg.toast('🙈 Hidden 🙈')
 elseif
-  BG == 15 then EMPTY_VL()
-gg.toast('🙈 Hidden 🙈')
-elseif
   BG == 16 then OPTIONS_MENU()
 gg.toast('🙈 Hidden 🙈')
 elseif
