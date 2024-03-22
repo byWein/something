@@ -102,7 +102,7 @@ Success_message = gg.alert('🅰️  AUTO STASH  🅰️  👉  ✅️ SUCCESS �
 if Success_message == nil then
 elseif Success_message == 3 then MAIN_MENU()
 elseif
-  Success_message == 1 then REPLACEMENT()
+  Success_message == 1 then POINT_REPLACE()
 end
 Auto = false
 Main_go = false
