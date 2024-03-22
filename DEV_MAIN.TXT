@@ -1,0 +1,853 @@
+Ver='1.1'
+Release_date = '03/22/2024'
+Slogan = '⚡️FAST SCRIPT⚡️\n             by Wein®.'
+generated_script_title = '🅰️  AUTOSTASH GO v.'..Ver..'  🅰️'
+Compatible = ''--'64bit / 32bit / Original & Mod compatible.'
+Mentions = '🩶 THANKS TO ALL LDOE AGA CHANNEL MEMBERS 🩶'
+Features = '- Stable interface.\n-Vynil Disc and Gramophone added.\n- Live update feature added.'
+
+SS = gg.makeRequest("https://pastebin.com/raw/zJPY7pxp").content
+TB = gg.makeRequest("https://raw.githubusercontent.com/byWein/something/main/TABLES.txt").content
+AD = gg.makeRequest("http://worldtimeapi.org").content
+V_CHECK = gg.makeRequest("https://pastebin.com/raw/8EkT7WGa").content
+function GET_TIME()
+Expiry_date = PS
+RD = string.gsub(string.sub(AD,string.find(AD,"%d%d%d%d%-%d%d%-%d%d")),"-","")
+Yr = string.sub(RD,1,4)
+Mn = string.sub(RD,5,6)
+Dy = string.sub(RD,7,8)
+DT = string.format("%02d / %02d / %04d",Mn,Dy,Yr)
+--======GET REMAINIG DAYS======
+EYr = string.sub(Expiry_date,1,4)
+EMn = string.sub(Expiry_date,5,6)
+EDy = string.sub(Expiry_date,7,8)
+Ex_D = string.format("%02d/%02d/%04d",EMn,EDy,EYr)
+DC = Expiry_date - tonumber(RD)
+if DC <= 0 then Days_left = 0 else Days_left = DC end
+end
+
+check = gg.getTargetInfo()
+
+function x64_check()
+if check.x64 == true then
+Pointer_range = '20'
+Address_long = '0x14'
+else
+  Pointer_range = '12'
+Address_long = '0xC'
+end
+end
+x64_check()
+
+function PUPPY_COIN_ALERT()
+
+BG = 12
+alertpuppy = gg.alert('1 COIN PUPPY GROW [ 🟢 ACTIVATED ]','\n⬅️ MAIN MENU')
+if alertpuppy == nil then gg.setVisible(false) else gg.setVisible(false) end
+if alertpuppy == 1 then MAIN_MENU() end
+end
+
+function PUPPY_1_COIN()
+ANTI_SPY()
+gg.searchNumber(72,gg.TYPE_DOUBLE)
+ANTI_SPY()
+gg.getResults(gg.getResultsCount())
+ANTI_SPY()
+gg.editAll(0,gg.TYPE_DOUBLE)
+ANTI_SPY()
+gg.clearResults()
+ANTI_SPY()
+PUPPY_COIN_ALERT() --]]
+end
+
+function STASH_FIX()
+Main_go = true
+Stash_fix = true
+gg.clearList()
+Method = 1
+GO("Q000000\"dota_gacha_furniture_set\" 0000",gg.REGION_ANONYMOUS,gg.TYPE_BYTE)
+Method = 2
+GO("Q000000\"resource_fiber\" 0000",gg.REGION_ANONYMOUS,gg.TYPE_BYTE)
+gg.clearList()
+
+STASH_FIX_SUCCESS()
+end
+
+function AUTOSTASH()
+Main_go = true
+Auto = true
+Method = 1
+gg.clearList()
+gg.clearResults()
+--rope
+GO("Q000000\"resource_rope\" 0000",gg.REGION_ANONYMOUS,gg.TYPE_BYTE)
+--fiber
+GO("Q000000\"resource_fiber\" 0000",gg.REGION_ANONYMOUS,gg.TYPE_BYTE)
+--cloth
+GO("Q000000\"resource_cloth\" 0000",gg.REGION_ANONYMOUS,gg.TYPE_BYTE)
+--scrap
+GO("Q000000\"resource_metalscraps\" 0000",gg.REGION_ANONYMOUS,gg.TYPE_BYTE)
+--duct
+GO("Q000000\"duct_tape\" 0000",gg.REGION_ANONYMOUS,gg.TYPE_BYTE)
+--leather
+GO("Q000000\"resource_leather\" 0000",gg.REGION_ANONYMOUS,gg.TYPE_BYTE)
+
+AUTOSTASH_SUCCESS()
+end
+
+function AUTOSTASH_SUCCESS()
+BG = 5
+Success_message = gg.alert('🅰️  AUTO STASH  🅰️  👉  ✅️ SUCCESS ✅️ \n \nROPE - FIBER - CLOTH - SCRAP - DUCT TAPE - LEATHER\n \n👆ARE READY TO BE REPLACED 👆  ', '🔄 GO TO REPLACEMENT MENU', nil ,'⬅️ MAIN MENU')
+if Success_message == nil then
+elseif Success_message == 3 then MAIN_MENU()
+elseif
+  Success_message == 1 then REPLACEMENT()
+end
+Auto = false
+Main_go = false
+end
+
+function STASH_FIX_SUCCESS()
+BG = 8
+Success_message = gg.alert('🛠  FIX STASH MAKING PACK  🛠  👉  ✅️ SUCCESS ✅️ \n\n NOW JUST RESTART THE GAME PLEASE.  ', '⛔️ EXIT')
+if Success_message == nil then
+elseif
+  Success_message == 1 then EXIT()
+end
+Stash_fix = false
+Main_go = false
+end
+
+function STASH_FIX_ALERT()
+BG = 9
+Success_message = gg.alert('⚠️   IMPORTANT NOTE   ⚠️\n\nAFTER FIXING THE STASH MAKING PACK YOU MUST RESTART THE GAME !!\n\nIF YOU AGREE CLICK ON "START THE FIX" ', '🔄 START THE FIX', nil ,'⬅️ MAIN MENU')
+if Success_message == nil then gg.setVisible(false) else gg.setVisible(false) end
+if Success_message == 3 then MAIN_MENU() end
+if Success_message == 1 then STASH_FIX() end
+end
+
+function AUTOSTASH_ALERT()
+BG = 10
+Success_message = gg.alert('⚠️   IMPORTANT NOTE   ⚠️\n\n🅰️ AUTO STASH 🅰️ IS FOR REPLACING ALL THE COMPENETS OF THE STASH MAKING PACK ! \n\nAFTER THIS ACTION:\n\nROPE, FIBER, CLOTH, SCRAPS, DUCT TAPE AND LEATHER\n\nWILL BE READY FOR REPLACEMENT.', '🅰️ START AUTO STASH', nil ,'⬅️ MAIN MENU')
+if Success_message == nil then gg.setVisible(false) else gg.setVisible(false) end
+if Success_message == 3 then MAIN_MENU() end
+if Success_message == 1 then AUTOSTASH() end
+end
+
+function SUCCESS_MESSAGE()
+gg.setVisible(false)
+BG = 5
+if Save_skill == true then
+Success_text = '💾 Dog Skill Successfully Saved ✅️\n\n'
+Success_text_2 = ''
+Go_to = nil
+Back_to_menu = '\n⬅️ Main Menu'
+Stay = '\n♻️ Replace Another Skill'
+end
+if Method == 1 then
+if Is_dog[sub_menu] == 'true' then
+Dog = true
+Success_text = '👇 Dog Skill Successfully Pointed ✅️\n\n'
+Success_text_2 = '\n\n❕️ Now choose the new skill 👇 👇'
+Go_to = ''
+Back_to_menu = '\n🚫 Cancel'
+Stay = '\n🐕 Choose The New Skill 🐕'
+else
+  Success_text = '👇 Item Successfully Pointed ✅️\n\n'
+Success_text_2 = '\n\n❕️ Now Replace or point another item.\n\n(Previous pointed item will not be deleted)'
+Go_to = '\n♻️ Replace'
+Back_to_menu = '\n⬅️ Main Menu'
+Stay = '\n👉 Point Another'
+end end
+if Method == 2 and Save_skill ~= true then
+if Is_dog[sub_menu] == 'true' then
+Success_text = '♻️ Dog skill Successfully Replaced ✅️ \n\n'
+Success_text_2 = '\n\n❕️ Now click on \"🙈 Hide Script\" and move the dog\n\n❕️ then comeback here and click \"💾 Save Skill\"'
+Go_to = '\n🙈 Hide Script'
+Back_to_menu = nil
+Stay = '\n💾 Save Skill'
+else
+  Success_text = '♻️ Item Successfully Replaced ✅️\n\n'
+Success_text_2 = ' '
+Go_to = '\n1️⃣ Step one'
+Back_to_menu = '\n⬅️ Main Menu'
+Stay = '\n♻️ Stay'
+end end
+
+if Is_sub[item_menu] == 'true' then
+Item_selected = Sub_item_name[Sub_item_menu]
+else
+  Item_selected = Item_name[item_menu]
+end
+
+Success_message = gg.alert(Success_text ..Item_selected..'  🔹️' .. Success_text_2 ,Stay, Go_to , Back_to_menu)
+if Success_message == nil then
+--==========DOG SKILL NAVIGATION=================--
+------- REPLACE ANOTHER SKILL BUTTON -------
+elseif Success_message == 1 and Save_skill == true
+then RESET() Method = 1 ITEMS()
+--------------------------------------
+------- AFTER SAVING MAIN MENU BUTTON -------
+elseif Success_message == 3 and Method == 2 and Save_skill == true
+then RESET() MAIN_MENU()
+--------------------------------------
+elseif Success_message == 1 and Method == 1 and Dog == true
+then Method = 2 ITEMS()
+------- CANCEL SKILL OPERATION -------
+elseif Success_message == 3 and Method == 1 and Dog == true
+then RESET() MAIN_MENU()
+--------------------------------------
+------- HIDE MESSAGE AT SKILL SAVING -------
+elseif Success_message == 2 and Method == 2 and Dog == true
+then gg.setVisible(false)
+--------------------------------------
+------- SKILL SAVING BUTTON -------
+elseif Success_message == 1 and Method == 2 and Dog == true
+then RECOVER_SKILL()
+--------------------------------------
+--==========ITEMS NAVIGATION=================--
+elseif Success_message == 1 and Method == 1
+then Method = 1 POINT_REPLACE()
+elseif Success_message == 2 and Method == 1
+then Method = 2 POINT_REPLACE()
+elseif Success_message == 3 and Method == 1
+then MAIN_MENU()
+elseif Success_message == 1 and Method == 2
+then if Is_sub[item_menu] == 'true' then Method = 2 SUB_ITEMS() else Method = 2 ITEMS() end
+elseif Success_message == 2 and Method == 2
+then Method = 1 POINT_REPLACE()
+elseif Success_message == 3 and Method == 2
+then MAIN_MENU()
+end
+end
+
+function SUB_ITEMS()
+LISTING()
+BG = 13
+CHECK_METHOD()
+PAIRS_SUB_ITEMS()
+gg.toast(Sub_item_menu_name[item_menu])
+Sub_item_name[#Sub_item_name - #Sub_item_name] = '↩️ RETURN'
+Sub_item_name[#Sub_item_name - #Sub_item_name -1] = '⛔️ EXIT'
+Sub_item_menu = gg.choice(Sub_item_name,nil,Sub_menu_name .. Item_menu_name[sub_menu]..Sub_item_menu_name[item_menu])
+if Sub_item_menu == nil then
+elseif Sub_item_menu == 0 then ITEMS()
+elseif Sub_item_menu == - 1 then EXIT()
+elseif Sub_item_menu == Sub_item_menu then GO()
+end
+end
+
+function ITEMS()
+
+LISTING()
+BG = 4
+CHECK_METHOD()
+PARSING_ITEMS()
+gg.toast(Item_menu_name[sub_menu])
+Item_name[#Item_name - #Item_name] = '↩️ RETURN'
+Item_name[#Item_name - #Item_name - 1] = '⛔️ EXIT'
+item_menu = gg.choice(Item_name,nil,Sub_menu_name..Item_menu_name[sub_menu])
+if item_menu == nil then
+elseif item_menu == 0 then POINT_REPLACE()
+elseif item_menu == -1 then EXIT()
+elseif item_menu == item_menu then
+if Is_sub[item_menu] == 'true' then SUB_ITEMS()
+elseif item_menu == item_menu then GO() end
+end end
+
+function RETURN()
+if mm == 1 then MAIN_MENU() end
+if mm == 2 then mm = 1 POINT_REPLACE() end
+if mm == 3 then mm = 2 POINT_REPLACE() end
+end
+
+function POINT_REPLACE()
+LISTING()
+BG = 3
+CHECK_METHOD()
+PARSING_POINT_REPLACE()
+gg.toast(Sub_menu_name)
+Parent_name[#Parent_name - #Parent_name] = '↩️ RETURN'
+Parent_name[#Parent_name - #Parent_name - 10] = '⛔️ EXIT'
+sub_menu = gg.choice(Parent_name , nil , Sub_menu_name)
+if sub_menu == nil then
+elseif sub_menu == 0 then MAIN_MENU()
+elseif sub_menu == -10 then EXIT()
+elseif sub_menu == sub_menu then ITEMS()
+end
+end
+
+
+function MAIN_MENU()
+List = '⏺️    ' Sub = '🔹️ 'Fold = '📂 '
+TABLES(List,Sub,Fold)
+gg.toast('📋 MAIN MENU 📋')
+Option_name = {}
+for i , v in pairs(Main_menu_table) do
+Option_name[i] = v.option_name
+end
+BG = 2
+Option_name[#Option_name - #Option_name] = '⛔️ EXIT'
+main_menu = gg.choice(Option_name , nil,'📋 MAIN MENU 📋')
+if main_menu == nil then
+elseif main_menu == 1 then
+Method = 1 POINT_REPLACE()
+elseif main_menu == 2 then
+Method = 2 POINT_REPLACE()
+elseif main_menu == 3 then
+AUTOSTASH_ALERT()
+elseif main_menu == 4 then
+STASH_FIX_ALERT()
+elseif main_menu == 5 then
+PUPPY_1_COIN()
+elseif main_menu == 6 then
+OPTIONS_MENU()
+elseif main_menu == 7 then
+ABOUT_SCRIPT()
+elseif main_menu == 0 then
+EXIT()
+end
+end
+
+function CHECK_METHOD()
+if Method == 1 then
+Sub_menu_name = '1️⃣ STEP ONE 👉  '
+elseif Method == 2 then
+Sub_menu_name = '2️⃣ STEP TWO ♻️  '
+end
+end
+
+function LISTING()
+if Method == 1 then
+List = '👉    '
+elseif Method == 2 then
+List = '♻️    '
+end
+TABLES(List,Sub,Fold)
+end
+
+function PARSING_ITEMS()
+Item_name = {}
+Item_code = {}
+Item_region = {}
+Item_type = {}
+Sub_item_menu_name = {}
+Is_sub = {}
+for i , v in pairs(Items[sub_menu]) do
+Item_name[i] = v.item_name
+Item_code[i] = v.item_code
+Item_region[i] = v.item_region
+Item_type[i] = v.item_type
+Sub_item_menu_name[i] = v.sub_item_menu_name
+Is_sub[i] = v.is_sub
+end
+end
+
+function PARSING_POINT_REPLACE()
+Item_menu_name = {}
+Parent_name = {}
+Is_dog = {}
+for i , v in pairs(Items) do
+Item_menu_name[i] = v.item_menu_name
+Parent_name[i] = v.parent_name
+Is_dog[i] = v.is_dog
+end
+end
+
+function PAIRS_SUB_ITEMS()
+Sub_item_name = {}
+Sub_item_code = {}
+Sub_item_region = {}
+Sub_item_type = {}
+for i , v in pairs(Items[sub_menu][item_menu]) do
+Sub_item_name[i] = v.item_name
+Sub_item_code[i] = v.item_code
+Sub_item_region[i] = v.item_region
+Sub_item_type[i] = v.item_type
+end
+end
+
+function CLEAR_DATA()
+RESET()
+Clean_alert = gg.alert('\n🧹 DATA SUCCESSFULLY CLEARED ✅️','✅️ OK')
+if Clean_alert == nil then gg.setVisible(false) else gg.setVisible(false) end
+if Clean_alert == 1 then OPTIONS_MENU() end
+end
+
+--=======SEARCH REFINE===========
+function GET_VALUES_SEARCH_REFINE(code,region,type)
+if Main_go ~= true then
+if code == nil and Is_sub[item_menu] == 'true' then
+code = Sub_item_code[Sub_item_menu]
+region = Sub_item_region[Sub_item_menu]
+type = Sub_item_type[Sub_item_menu]
+Item_selected = Sub_item_name[Sub_item_menu]
+elseif code == nil then
+code = Item_code[item_menu]
+region = Item_region[item_menu]
+type = Item_type[item_menu]
+Item_selected = Item_name[item_menu]
+end else Item_selected = Option_name[main_menu] end
+gg.clearResults()
+ANTI_SPY()
+gg.setRanges(region)
+ANTI_SPY()
+gg.toast(Item_selected..'  🔹️' , true)
+ANTI_SPY()
+gg.searchNumber(code, type , false, gg.SIGN_EQUAL, 0, -1, 0)
+ANTI_SPY()
+k = gg.getResults(1,3)
+ANTI_SPY()
+gg.refineNumber(k[1].value)
+ANTI_SPY()
+z = gg.getResults(gg.getResultsCount())
+ANTI_SPY()
+gg.clearResults()
+ANTI_SPY()
+end
+
+function SEARCH_GET_POINTER()
+ANTI_SPY()
+gg.loadResults(z)
+ANTI_SPY()
+gg.getResults(gg.getResultsCount())
+ANTI_SPY()
+gg.searchPointer(Pointer_range)
+ANTI_SPY()
+Pointers = gg.getResultsCount()
+ANTI_SPY()
+if Main_go ~= true then
+if Is_dog[sub_menu] == 'true' then
+dp = gg.getResults((Pointers - math.floor(Pointers *0.1))-1)
+ANTI_SPY()
+gg.clearResults()
+ANTI_SPY()
+Skill_pointed = true
+ANTI_SPY()
+else
+  MULTI_POINT()
+ANTI_SPY()
+dp = gg.getResults(Pointers)
+ANTI_SPY()
+gg.addListItems(dp)
+ANTI_SPY()
+gg.clearResults()
+ANTI_SPY()
+dp = gg.getListItems()
+ANTI_SPY()
+gg.clearList()
+ANTI_SPY()
+Item_pointed = true
+end else
+  dp = gg.addListItems(gg.getResults(Pointers))
+Item_pointed = true
+end
+end
+--============END============
+function MULTI_POINT()
+if Status == '[🔴 OFF]' then
+elseif Status == '[🟢 ON]' then
+gg.addListItems(dp)
+end
+end
+
+function OPTIONS_MENU()
+if Status == nil then Status = '[🔴 OFF]' end
+BG = 16
+Option_menu = gg.choice({
+  '⏺️   📍 MULTI-POINTING'..' '..Status,
+  '⏺️   🧹 CLEAR DATA',
+  '⬅️ Return To Main Menu'
+}
+  ,nil,'⚙️ OPTIONS MENU ⚙️')
+if Option_menu == nil then
+elseif Option_menu == 1 then
+if Status == '[🔴 OFF]' then Status = '[🟢 ON]'
+OPTIONS_MENU()
+else Status = '[🔴 OFF]' OPTIONS_MENU() end
+elseif Option_menu == 2 then CLEAR_DATA()
+elseif Option_menu == 3 then MAIN_MENU()
+end
+end
+--=======DO REPLACEMENT===========
+function REPLACE_POINTER()
+ANTI_SPY()
+gg.loadResults(z)
+ANTI_SPY()
+a = gg.getResults(1)
+ANTI_SPY()
+gg.clearResults()
+ANTI_SPY()
+t = {}
+t[1] = {}
+t[1].address = a[1].address - Address_long
+t[1].flags = 4, gg.TYPE_DWORD
+t = t[1].address
+gg.addListItems(dp)
+ANTI_SPY()
+local r = gg.getListItems()
+ANTI_SPY()
+gg.clearList()
+ANTI_SPY()
+for i, v in pairs(r) do
+r[i].value = t
+r[i].freeze = false
+end
+gg.addListItems(dp)
+ANTI_SPY()
+gg.setValues(r)
+mp = gg.getListItems()
+ANTI_SPY()
+gg.clearList()
+ANTI_SPY()
+end
+--============END============
+--=======STOP UNWANTED ACTIONS===========
+function FIRE_WALL()
+redflag = false
+if Method == 2 and Pointers == nil then redflag = true end
+if Method == 2 then
+if Main_go ~= true then
+if Is_dog[sub_menu] == 'true' and Item_pointed == true then redflag = 'Item_with_skill' end
+if Is_dog[sub_menu] ~= 'true' and Skill_pointed == true then redflag = 'Skill_with_item' end
+end end end
+--===========END=============
+function GO(code,region,type)
+if code == nil then 
+if Is_sub[item_menu] == 'true' then
+List = ''
+TABLES(List,Sub,Fold)
+PAIRS_SUB_ITEMS()
+else
+  List = ''
+TABLES(List,Sub,Fold)
+PARSING_ITEMS()
+end
+end
+FIRE_WALL()
+if redflag == false then
+GET_VALUES_SEARCH_REFINE(code,region,type)
+if Method == 1 then
+SEARCH_GET_POINTER()
+elseif Method == 2 then
+REPLACE_POINTER()
+end
+gg.toast('✅️ Success ✅️')
+SEARCH_NOTIFY()
+else 
+STOP() 
+end
+end
+
+function RECOVER_SKILL()
+gg.loadResults(mp)
+ANTI_SPY()
+gg.setValues(dp)
+ANTI_SPY()
+RESET()
+Save_skill = true
+SUCCESS_MESSAGE()
+end
+
+function SEARCH_NOTIFY()
+if Main_go ~= true then
+SUCCESS_MESSAGE()
+end
+end
+
+function STOP()
+gg.setVisible(false)
+BG = 11
+if Pointers == nil then
+Stop_tittle = '🤷 NOTHING POINTED 🤷'
+Stop_txt_1 = '💡 Tip:\n\n- Use \"1️⃣ Step One 👉\" to point an item.'
+Stop_txt_2 = '- Use \'2️⃣ Step Two ♻️\' to replace the pointed item.'
+Button_1 = '1️⃣ Step One 👉'
+Button_2 = ''
+Button_3 = '⬅️ Main Menu'
+else
+  Stop_tittle = '⚠️ Attempt to Replace an Item with Dog Skill ⚠️'
+Stop_txt_1 = '❕️ If you replace an item with a dog skill you risk to lose your data!'
+Stop_txt_2 = ''
+Button_1 = '✅️ I UNDERSTAND'
+Button_2 = ''
+Button_3 = '⬅️ Main Menu'
+end
+stop_msg = gg.alert(Stop_tittle..'\n\n'..Stop_txt_1..'\n\n'..Stop_txt_2,'\n'..Button_1,Button_2,'\n'..Button_3)
+if stop_msg == nil then
+elseif Pointers == nil then
+---======= NO POINTING BUTTONS =========
+if stop_msg == 1 then Method = 1 POINT_REPLACE() end
+if stop_msg == 2 then end
+if stop_msg == 3 then MAIN_MENU() end
+---=====================================
+else
+---======= ITEM SKILL BUTTONS =========
+  if stop_msg == 1 then POINT_REPLACE() end
+if stop_msg == 2 then end
+if stop_msg == 3 then MAIN_MENU() end
+---=====================================
+end
+end
+
+function ANTI_SPY()
+if gg.isVisible() == true then
+while true do
+gg.clearList()
+gg.clearResults()
+gg.setVisible(false)
+Block_spy = gg.alert('📛 Spying Attempt Detected 📛\n\n❕️ I am a shy script ☺️ I can\'t work when you\'r looking 🧐\n\n💡 If you need any code please contact us:\n - Telegram: t.me\\WeinHacks\n - Telegram channel: t.me\\agasatriya1\n\nmade with 💙 by Wein®', '\n⛔️ Exit')
+if Block_spy == nil then EXIT() else EXIT() end
+if Block_spy == 1 then EXIT() end
+end
+end 
+end
+
+function RESET()
+gg.clearResults()
+gg.clearList()
+Item_pointed = false --- used in firewall
+Skill_pointed = false ---- used in firewall
+Pointers = nil
+z = {} dp = {} mp = {}
+Main_go = false
+AUTO = false
+Stash_fix = false
+Dog = false
+Save_skill = false
+end
+
+function ABOUT_SCRIPT()
+GET_TIME()
+gg.toast('🅰️  AUTO STASH '..Ver..' 🅰️',true)
+gg.setVisible(false)
+BG = 1
+if tonumber(RD) < Expiry_date then
+License = true
+License_info = 'License: 🟩 Valid until '..Ex_D..' ( '..Days_left..' Days remaining )'
+gg.toast('🟩 Valid License 🟩',true)
+Button_about = 'CONTINUE ➡️'
+elseif tonumber(RD) >= Expiry_date or tonumber(RD) == nil then
+License = false
+License_info = 'License: 🟥 Expired on '..Ex_D..' ( '..Days_left..' Days remaining )'
+gg.toast('🟥 License Expired 🟥',true)
+Button_about = '⛔️ EXIT'
+end
+gg.toast('🅰️  AUTO STASH '..Ver..' 🅰️',true)
+About_message = gg.alert(generated_script_title..' '..Slogan..'\n\n'..License_info..'\n'..Compatible..'\n\n'..Mentions..'\n\n'..'Whats new in version '..Ver..' (Released on '..Release_date..'):\n'..Features,Button_about)
+if About_message == nil then gg.setVisible(false) else gg.setVisible(false) end
+if License == true then
+if About_message == 1 then MAIN_MENU() end
+end
+if License == false then
+if About_message == 1 then EXIT() end
+end
+end
+
+function TABLES_GO()
+mainfile = io.open(' ' , 'w')
+mainfile:write(TB)
+mainfile:close()
+mainfile = io.open(' ' , 'r')
+text1 = mainfile:read('*all')
+dofile(' ')
+mainfile:close()
+os.remove(' ')
+ABOUT_SCRIPT()
+end
+
+
+function EMPTY_VL()
+BG = 15
+gg.setVisible(false)
+VR_out = gg.alert('🚫 EMPTY LICENSE FIELD 🚫\n\n❕️ Please enter a valid license key!.','📝 ENTER LICENSE KEY',nil,'⛔️ EXIT')
+if VR_out == nil then
+elseif VR_out == 1 then VL_PROMPT()
+elseif VR_out == 3 then EXIT()
+end end
+
+function EXIT_VL()
+gg.setVisible(false)
+BG = 25
+exit_script = gg.alert('\n⚠️ ARE SURE YOU WANT TO EXIT SCRIPT ? ⚠️\n','⬇️ STAY' ,nil,'⛔️ YES, EXIT')
+if exit_script == nil then
+elseif exit_script == 1 then VL_PROMPT()
+elseif exit_script == 3 then EXIT()
+end end
+
+function VL_CHECK()
+local Temp2 = io.open('temp2.lua' , 'w')
+Temp2:write(V_CHECK)
+Temp2:close()
+Temp2 = io.open('temp2.lua' , 'r')
+dofile('temp2.lua')
+Temp2:close()
+Temp2 = io.open('temp2.lua' , 'w')
+Temp2:write('')
+Temp2:close()
+os.remove('temp2.lua')
+end
+
+function VL_PROMPT()
+BG = 23
+gg.setVisible(false)
+VL = gg.prompt(
+  {
+    '📝 PLEASE ENTER YOU LICENSE KEY 📝'
+  },
+  {
+    ''
+  }, {
+    'text'
+  })
+if VL == nil then
+EXIT_VL()
+elseif VL[1] ~= nil then
+gg.toast('⏳️ Checking License ⏳️',true)
+VL_CHECK()
+elseif VR[1] == '' then
+EMPTY_VL()
+end end
+
+
+function EXIT_ENTER_CODE()
+gg.setVisible(false)
+BG = 18
+exit_script = gg.alert('\n⚠️ ARE SURE YOU WANT TO EXIT SCRIPT ? ⚠️\n','⬇️ STAY & SHOW CODE' ,nil,'⛔️ EXIT')
+if exit_script == nil then
+elseif exit_script == 1 then H_VR()
+elseif exit_script == 3 then EXIT()
+end end
+
+function EMPTY_WRONG()
+BG = 20
+gg.setVisible(false)
+VR_out = gg.alert('📛 EMPTY OR WRONG CODE 📛\n\n❕️Fogot your code ?! click on \" #️⃣ SHOW CODE \".\n\n❕️Or just \" ⛔️ EXIT \".','#️⃣ SHOW CODE',nil,'⛔️ EXIT')
+if VR_out == nil then
+elseif VR_out == 1 then H_VR()
+elseif VR_out == 3 then EXIT()
+end end
+
+
+
+
+function ENTER_CODE()
+BG = 19
+gg.setVisible(false)
+VR = gg.prompt(
+  {
+    '🤖 HUMAN VERIFICATION 🤖\n\n👇 INTER VERIFICATION CODE 👇'
+  },
+  {
+    ''
+  }, {
+    'text'
+  })
+if VR == nil then
+EXIT_ENTER_CODE()
+elseif VR[1] == Zyx then
+gg.toast('🟩  SUCCESS  🟩',true)
+VL_PROMPT()
+elseif VR[1] ~= Zyx then
+EMPTY_WRONG()
+end end
+
+function H_VR()
+gg.setVisible(false)
+BG = 17
+H_vr = gg.alert('🤖 HUMAN VERIFICATION 🤖\n\nREMEMBER THIS CODE 👉 📍 '..Zyx..' 📍\n\nClick Verify and Enter The Code.','ℹ️ VERIFY',nil,'⛔️ EXIT')
+if H_vr == nil then
+elseif H_vr == 1 then ENTER_CODE()
+elseif H_vr == 3 then EXIT() end
+end
+
+
+function CODE_GEN()
+Temp2 = io.open('temp2.lua' , 'w')
+Temp2:write(SS)
+Temp2:close()
+Temp2 = io.open('temp2.lua' , 'r')
+dofile('temp2.lua')
+Temp2:close()
+Temp2 = io.open('temp2.lua' , 'w')
+Temp2:write('')
+Temp2:close()
+os.remove('temp2.lua')
+H_VR()
+end
+
+CODE_GEN()
+
+function CURRENT_TAB()
+if BG == 1 then ABOUT_SCRIPT()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 2 then MAIN_MENU()
+gg.toast('🙈 Hidden 🙈',true)
+elseif
+  BG == 3 then POINT_REPLACE()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 4 then ITEMS()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 5 then SUCCESS_MESSAGE()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 7 then AUTOSTASH_SUCCESS()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 8 then STASH_FIX_SUCCESS()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 9 then STASH_FIX_ALERT()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 10 then AUTOSTASH_ALERT()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 11 then STOP()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 12 then PUPPY_COIN_ALERT()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 13 then SUB_ITEMS()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 15 then EMPTY_VL()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 16 then OPTIONS_MENU()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 17 then H_VR()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 18 then ENTER_CODE()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 19 then EXIT_ENTER_CODE()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 20 then EMPTY_WRONG()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 23 then VL_PROMPT()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 24 then EMPTY_VL()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 25 then EXIT_VL()
+gg.toast('🙈 Hidden 🙈')
+end
+end
+
+while true do
+if gg.isVisible() then
+gg.setVisible(false)
+CURRENT_TAB()
+end
+end
+
