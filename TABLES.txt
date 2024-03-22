@@ -4,12 +4,6 @@ Main_menu_table = {
   },
   [2] = {['option_name'] = List .. '2️⃣  STEP TWO ♻️ REPLACEMENT ♻️'
   },
-  [3] = {['option_name'] = List .. '🅰️  AUTO STASH️'
-  },
-  [4] = {['option_name'] = List .. '🛠  FIX STASH MAKING PACK'
-  },
-  [5] = {['option_name'] = List .. '🐶  1 COIN PUPPY GROW'
-  },
   [6] = {['option_name'] = List .. '⚙️ OPTIONS'
   },
   [7] = {['option_name'] = '\n❕️ ABOUT THIS SCRIPT'
