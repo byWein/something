@@ -7,7 +7,8 @@ Mentions = '🩶 THANKS TO ALL LDOE AGA CHANNEL MEMBERS 🩶'
 Features = '- Stable interface.\n-Vynil Disc and Gramophone added.\n- Live update feature added.'
 
 SS = gg.makeRequest("https://pastebin.com/raw/zJPY7pxp").content
-TB = gg.makeRequest("https://raw.githubusercontent.com/byWein/something/main/TABLES.txt").content
+--TB = gg.makeRequest("https://raw.githubusercontent.com/byWein/something/main/TABLES.txt").content
+TB = gg.makeRequest("https://raw.githubusercontent.com/byWein/something/main/DEV_TABLE.TXT").content
 AD = gg.makeRequest("http://worldtimeapi.org").content
 V_CHECK = gg.makeRequest("https://pastebin.com/raw/8EkT7WGa").content
 function GET_TIME()
@@ -850,4 +851,3 @@ gg.setVisible(false)
 CURRENT_TAB()
 end
 end
-
