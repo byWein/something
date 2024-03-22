@@ -757,7 +757,7 @@ if H_vr == nil then
 elseif H_vr == 1 then ENTER_CODE()
 elseif H_vr == 3 then EXIT() end
 end
-CODE_GEN()
+
 
 function CODE_GEN()
 gg.toast('⏳️ Generating Code ⏳️',true)
@@ -773,7 +773,7 @@ Temp2:close()
 os.remove('temp2.lua')
 H_VR()
 end
-
+CODE_GEN()
 function CURRENT_TAB()
 if BG == 15 then ABOUT_SCRIPT()
 gg.toast('🙈 Hidden 🙈')
