@@ -614,6 +614,7 @@ Save_skill = false
 end
 
 function ABOUT_SCRIPT()
+GET_TIME()
 gg.toast('🅰️  AUTO STASH '..Ver..' 🅰️',true)
 gg.setVisible(false)
 BG = 15
@@ -681,8 +682,6 @@ Temp2 = io.open('temp2.lua' , 'w')
 Temp2:write('')
 Temp2:close()
 os.remove('temp2.lua')
-GET_TIME()
-ABOUT_SCRIPT()
 end
 
 function VL_PROMPT()
@@ -743,7 +742,7 @@ VR = gg.prompt(
 if VR == nil then
 EXIT_ENTER_CODE()
 elseif VR[1] == Zyx then
-gg.toast('⏳️ Checking License ⏳️',true)
+gg.toast('🟩  SUCCESS  🟩',true)
 VL_PROMPT()
 elseif VR[1] ~= Zyx then
 EMPTY_WRONG()
@@ -761,7 +760,7 @@ end
 
 function CODE_GEN()
 gg.toast('⏳️ Generating Code ⏳️',true)
-local Temp2 = io.open('temp2.lua' , 'w')
+Temp2 = io.open('temp2.lua' , 'w')
 Temp2:write(SS)
 Temp2:close()
 Temp2 = io.open('temp2.lua' , 'r')
@@ -773,7 +772,9 @@ Temp2:close()
 os.remove('temp2.lua')
 H_VR()
 end
+
 CODE_GEN()
+
 function CURRENT_TAB()
 if BG == 15 then ABOUT_SCRIPT()
 gg.toast('🙈 Hidden 🙈')
