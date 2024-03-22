@@ -64,12 +64,10 @@ end
 function STASH_FIX()
 Main_go = true
 Stash_fix = true
-gg.clearList()
 Method = 1
 GO("Q000000\"dota_gacha_furniture_set\" 0000",gg.REGION_ANONYMOUS,gg.TYPE_BYTE)
 Method = 2
 GO("Q000000\"resource_fiber\" 0000",gg.REGION_ANONYMOUS,gg.TYPE_BYTE)
-gg.clearList()
 
 STASH_FIX_SUCCESS()
 end
@@ -426,7 +424,7 @@ ANTI_SPY()
 Skill_pointed = true
 ANTI_SPY()
 else
-  MULTI_POINT()
+MULTI_POINT()
 ANTI_SPY()
 dp = gg.getResults(Pointers)
 ANTI_SPY()
@@ -440,7 +438,7 @@ gg.clearList()
 ANTI_SPY()
 Item_pointed = true
 end else
-  dp = gg.addListItems(gg.getResults(Pointers))
+dp = gg.addListItems(gg.getResults(Pointers))
 Item_pointed = true
 end
 end
@@ -567,7 +565,7 @@ Button_1 = '1️⃣ Step One 👉'
 Button_2 = ''
 Button_3 = '⬅️ Main Menu'
 else
-  Stop_tittle = '⚠️ Attempt to Replace an Item with Dog Skill ⚠️'
+Stop_tittle = '⚠️ Attempt to Replace an Item with Dog Skill ⚠️'
 Stop_txt_1 = '❕️ If you replace an item with a dog skill you risk to lose your data!'
 Stop_txt_2 = ''
 Button_1 = '✅️ I UNDERSTAND'
@@ -592,6 +590,7 @@ end
 end
 
 function ANTI_SPY()
+  --[[
 if gg.isVisible() == true then
 while true do
 gg.clearList()
@@ -601,7 +600,7 @@ Block_spy = gg.alert('📛 Spying Attempt Detected 📛\n\n❕️ I am a shy scr
 if Block_spy == nil then EXIT() else EXIT() end
 if Block_spy == 1 then EXIT() end
 end
-end 
+end --]]
 end
 
 function RESET()
@@ -650,9 +649,9 @@ mainfile = io.open(' ' , 'w')
 mainfile:write(TB)
 mainfile:close()
 mainfile = io.open(' ' , 'r')
-text1 = mainfile:read('*all')
-dofile(' ')
+mainfile:read('*all')
 mainfile:close()
+dofile(' ')
 os.remove(' ')
 ABOUT_SCRIPT()
 end
@@ -668,7 +667,6 @@ elseif VR_out == 3 then EXIT()
 end end
 
 function EXIT_VL()
-gg.setVisible(false)
 BG = 25
 exit_script = gg.alert('\n⚠️ ARE SURE YOU WANT TO EXIT SCRIPT ? ⚠️\n','⬇️ STAY' ,nil,'⛔️ YES, EXIT')
 if exit_script == nil then
@@ -677,16 +675,17 @@ elseif exit_script == 3 then EXIT()
 end end
 
 function VL_CHECK()
-local Temp2 = io.open('temp2.lua' , 'w')
+local Temp2 = io.open(' ' , 'w')
 Temp2:write(V_CHECK)
 Temp2:close()
-Temp2 = io.open('temp2.lua' , 'r')
-dofile('temp2.lua')
+Temp2 = io.open(' ' , 'r')
+Temp2:read('*all')
 Temp2:close()
-Temp2 = io.open('temp2.lua' , 'w')
+dofile(' ')
+Temp2 = io.open(' ' , 'w')
 Temp2:write('')
 Temp2:close()
-os.remove('temp2.lua')
+os.remove(' ')
 end
 
 function VL_PROMPT()
@@ -764,16 +763,16 @@ end
 
 
 function CODE_GEN()
-Temp2 = io.open('temp2.lua' , 'w')
+Temp2 = io.open(' ' , 'w')
 Temp2:write(SS)
 Temp2:close()
-Temp2 = io.open('temp2.lua' , 'r')
-dofile('temp2.lua')
+Temp2 = io.open(' ' , 'r')
+dofile(' ')
 Temp2:close()
-Temp2 = io.open('temp2.lua' , 'w')
+Temp2 = io.open(' ' , 'w')
 Temp2:write('')
 Temp2:close()
-os.remove('temp2.lua')
+os.remove(' ')
 H_VR()
 end
 
@@ -851,3 +850,4 @@ gg.setVisible(false)
 CURRENT_TAB()
 end
 end
+
