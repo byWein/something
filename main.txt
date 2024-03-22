@@ -9,7 +9,8 @@ Features = '- All season decorations added.\n- All extremly rare bike skins adde
 SS = gg.makeRequest("https://pastebin.com/raw/zJPY7pxp").content
 TB = gg.makeRequest("https://raw.githubusercontent.com/byWein/something/main/TABLES.txt").content
 AD = gg.makeRequest("http://worldtimeapi.org").content
-VL = gg.makeRequest("https://pastebin.com/raw/8EkT7WGa").content
+V_CHECK = gg.makeRequest("https://pastebin.com/raw/8EkT7WGa").content
+function GET_TIME()
 Expiry_date = PS
 RD = string.gsub(string.sub(AD,string.find(AD,"%d%d%d%d%-%d%d%-%d%d")),"-","")
 Yr = string.sub(RD,1,4)
@@ -23,7 +24,7 @@ EDy = string.sub(Expiry_date,7,8)
 Ex_D = string.format("%02d/%02d/%04d",EMn,EDy,EYr)
 DC = Expiry_date - tonumber(RD)
 if DC <= 0 then Days_left = 0 else Days_left = DC end
-
+end
 
 check = gg.getTargetInfo()
 
@@ -680,6 +681,7 @@ Temp2 = io.open('temp2.lua' , 'w')
 Temp2:write('')
 Temp2:close()
 os.remove('temp2.lua')
+GET_TIME()
 ABOUT_SCRIPT()
 end
 
