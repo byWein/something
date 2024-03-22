@@ -1,10 +1,10 @@
-Ver='1.0'
+Ver='1.1'
 Release_date = '03/22/2024'
-Slogan = '⚡️FAST SCRIPT⚡️\n            by Wein®.'
+Slogan = '⚡️FAST SCRIPT⚡️\n             by Wein®.'
 generated_script_title = '🅰️  AUTOSTASH GO v.'..Ver..'  🅰️'
 Compatible = ''--'64bit / 32bit / Original & Mod compatible.'
 Mentions = '🩶 THANKS TO ALL LDOE AGA CHANNEL MEMBERS 🩶'
-Features = '- Major Update.\n- Few bike skins added.\n- Live update feature added.'
+Features = '- Stable interface.\n-Vynil Disc and Gramophone added.\n- Live update feature added.'
 
 SS = gg.makeRequest("https://pastebin.com/raw/zJPY7pxp").content
 TB = gg.makeRequest("https://raw.githubusercontent.com/byWein/something/main/TABLES.txt").content
@@ -656,9 +656,9 @@ end
 function EMPTY_VL()
 BG = 15
 gg.setVisible(false)
-VR_out = gg.alert('📛 EMPTY OR WRONG CODE 📛\n\n❕️Fogot your code ?! click on \" #️⃣ SHOW CODE \".\n\n❕️Or just \" ⛔️ EXIT \".','#️⃣ SHOW CODE',nil,'⛔️ EXIT')
+VR_out = gg.alert('🚫 EMPTY LICENSE FIELD 🚫\n\n❕️ Please enter a valid license key!.','📝 ENTER LICENSE KEY',nil,'⛔️ EXIT')
 if VR_out == nil then
-elseif VR_out == 1 then H_VR()
+elseif VR_out == 1 then VL_PROMPT()
 elseif VR_out == 3 then EXIT()
 end end
 
@@ -667,7 +667,7 @@ gg.setVisible(false)
 BG = 25
 exit_script = gg.alert('\n⚠️ ARE SURE YOU WANT TO EXIT SCRIPT ? ⚠️\n','⬇️ STAY' ,nil,'⛔️ YES, EXIT')
 if exit_script == nil then
-elseif exit_script == 1 then H_VR()
+elseif exit_script == 1 then VL_PROMPT()
 elseif exit_script == 3 then EXIT()
 end end
 
@@ -711,7 +711,7 @@ gg.setVisible(false)
 BG = 18
 exit_script = gg.alert('\n⚠️ ARE SURE YOU WANT TO EXIT SCRIPT ? ⚠️\n','⬇️ STAY & SHOW CODE' ,nil,'⛔️ EXIT')
 if exit_script == nil then
-elseif exit_script == 1 then VL_PROMPT()
+elseif exit_script == 1 then H_VR()
 elseif exit_script == 3 then EXIT()
 end end
 
