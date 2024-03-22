@@ -1,10 +1,10 @@
 Ver='1.0'
 Release_date = '03/17/2024'
-Slogan = '⚡️FAST SCRIPT⚡️ by Wein®.'
+Slogan = '⚡️FAST SCRIPT⚡️\n            by Wein®.'
 generated_script_title = '🅰️  AUTOSTASH GO v.'..Ver..'  🅰️'
 Compatible = ''--'64bit / 32bit / Original & Mod compatible.'
 Mentions = '🩶 THANKS TO ALL LDOE AGA CHANNEL MEMBERS 🩶'
-Features = '- All season decorations added.\n- All extremly rare bike skins added.\n- Other functional updates.'
+Features = '- Major Update.\n- Few bike skins added.\n- Live update feature added.'
 
 SS = gg.makeRequest("https://pastebin.com/raw/zJPY7pxp").content
 TB = gg.makeRequest("https://raw.githubusercontent.com/byWein/something/main/TABLES.txt").content
