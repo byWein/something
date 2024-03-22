@@ -1,5 +1,5 @@
 Ver='1.0'
-Release_date = '03/17/2024'
+Release_date = '03/30/2024'
 Slogan = '⚡️FAST SCRIPT⚡️\n            by Wein®.'
 generated_script_title = '🅰️  AUTOSTASH GO v.'..Ver..'  🅰️'
 Compatible = ''--'64bit / 32bit / Original & Mod compatible.'
