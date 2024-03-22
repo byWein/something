@@ -1,6 +1,6 @@
 Ver='1.0'
 Release_date = '03/22/2024'
-Slogan = '⚡️FAST SCRIPT⚡️\n             by Wein®.'
+Slogan = '⚡️FAST SCRIPT⚡️\n            by Wein®.'
 generated_script_title = '🅰️  AUTOSTASH GO v.'..Ver..'  🅰️'
 Compatible = ''--'64bit / 32bit / Original & Mod compatible.'
 Mentions = '🩶 THANKS TO ALL LDOE AGA CHANNEL MEMBERS 🩶'
@@ -96,7 +96,7 @@ AUTOSTASH_SUCCESS()
 end
 
 function AUTOSTASH_SUCCESS()
-BG = 7
+BG = 5
 Success_message = gg.alert('🅰️  AUTO STASH  🅰️  👉  ✅️ SUCCESS ✅️ \n \nROPE - FIBER - CLOTH - SCRAP - DUCT TAPE - LEATHER\n \n👆ARE READY TO BE REPLACED 👆  ', '🔄 GO TO REPLACEMENT MENU', nil ,'⬅️ MAIN MENU')
 if Success_message == nil then
 elseif Success_message == 3 then MAIN_MENU()
@@ -286,7 +286,7 @@ Option_name = {}
 for i , v in pairs(Main_menu_table) do
 Option_name[i] = v.option_name
 end
-BG = 17
+BG = 2
 Option_name[#Option_name - #Option_name] = '⛔️ EXIT'
 main_menu = gg.choice(Option_name , nil,'📋 MAIN MENU 📋')
 if main_menu == nil then
@@ -617,7 +617,7 @@ function ABOUT_SCRIPT()
 GET_TIME()
 gg.toast('🅰️  AUTO STASH '..Ver..' 🅰️',true)
 gg.setVisible(false)
-BG = 15
+BG = 1
 if tonumber(RD) < Expiry_date then
 License = true
 License_info = 'License: 🟩 Valid until '..Ex_D..' ( '..Days_left..' Days remaining )'
@@ -654,7 +654,7 @@ end
 
 
 function EMPTY_VL()
-BG = 23
+BG = 15
 gg.setVisible(false)
 VR_out = gg.alert('📛 EMPTY OR WRONG CODE 📛\n\n❕️Fogot your code ?! click on \" #️⃣ SHOW CODE \".\n\n❕️Or just \" ⛔️ EXIT \".','#️⃣ SHOW CODE',nil,'⛔️ EXIT')
 if VR_out == nil then
@@ -664,7 +664,7 @@ end end
 
 function EXIT_VL()
 gg.setVisible(false)
-BG = 24
+BG = 25
 exit_script = gg.alert('\n⚠️ ARE SURE YOU WANT TO EXIT SCRIPT ? ⚠️\n','⬇️ STAY' ,nil,'⛔️ YES, EXIT')
 if exit_script == nil then
 elseif exit_script == 1 then H_VR()
@@ -685,7 +685,7 @@ os.remove('temp2.lua')
 end
 
 function VL_PROMPT()
-BG = 22
+BG = 23
 gg.setVisible(false)
 VL = gg.prompt(
   {
@@ -708,7 +708,7 @@ end end
 
 function EXIT_ENTER_CODE()
 gg.setVisible(false)
-BG = 20
+BG = 18
 exit_script = gg.alert('\n⚠️ ARE SURE YOU WANT TO EXIT SCRIPT ? ⚠️\n','⬇️ STAY & SHOW CODE' ,nil,'⛔️ EXIT')
 if exit_script == nil then
 elseif exit_script == 1 then VL_PROMPT()
@@ -716,7 +716,7 @@ elseif exit_script == 3 then EXIT()
 end end
 
 function EMPTY_WRONG()
-BG = 21
+BG = 20
 gg.setVisible(false)
 VR_out = gg.alert('📛 EMPTY OR WRONG CODE 📛\n\n❕️Fogot your code ?! click on \" #️⃣ SHOW CODE \".\n\n❕️Or just \" ⛔️ EXIT \".','#️⃣ SHOW CODE',nil,'⛔️ EXIT')
 if VR_out == nil then
@@ -750,7 +750,7 @@ end end
 
 function H_VR()
 gg.setVisible(false)
-BG = 18
+BG = 17
 H_vr = gg.alert('🤖 HUMAN VERIFICATION 🤖\n\nREMEMBER THIS CODE 👉 📍 '..Zyx..' 📍\n\nClick Verify and Enter The Code.','ℹ️ VERIFY',nil,'⛔️ EXIT')
 if H_vr == nil then
 elseif H_vr == 1 then ENTER_CODE()
@@ -759,7 +759,6 @@ end
 
 
 function CODE_GEN()
-gg.toast('⏳️ Generating Code ⏳️',true)
 Temp2 = io.open('temp2.lua' , 'w')
 Temp2:write(SS)
 Temp2:close()
@@ -776,10 +775,10 @@ end
 CODE_GEN()
 
 function CURRENT_TAB()
-if BG == 15 then ABOUT_SCRIPT()
+if BG == 1 then ABOUT_SCRIPT()
 gg.toast('🙈 Hidden 🙈')
 elseif
-  BG == 17 then MAIN_MENU()
+  BG == 2 then MAIN_MENU()
 gg.toast('🙈 Hidden 🙈',true)
 elseif
   BG == 3 then POINT_REPLACE()
@@ -789,9 +788,6 @@ elseif
 gg.toast('🙈 Hidden 🙈')
 elseif
   BG == 5 then SUCCESS_MESSAGE()
-gg.toast('🙈 Hidden 🙈')
-elseif
-  BG == 6 then SUB_PARENT()
 gg.toast('🙈 Hidden 🙈')
 elseif
   BG == 7 then AUTOSTASH_SUCCESS()
@@ -815,31 +811,31 @@ elseif
   BG == 13 then SUB_ITEMS()
 gg.toast('🙈 Hidden 🙈')
 elseif
-  BG == 14 then NO_POINTING()
+  BG == 15 then EMPTY_VL()
 gg.toast('🙈 Hidden 🙈')
 elseif
   BG == 16 then OPTIONS_MENU()
 gg.toast('🙈 Hidden 🙈')
 elseif
-  BG == 18 then H_VR()
+  BG == 17 then H_VR()
 gg.toast('🙈 Hidden 🙈')
 elseif
-  BG == 19 then ENTER_CODE()
+  BG == 18 then ENTER_CODE()
 gg.toast('🙈 Hidden 🙈')
 elseif
-  BG == 20 then EXIT_ENTER_CODE()
+  BG == 19 then EXIT_ENTER_CODE()
 gg.toast('🙈 Hidden 🙈')
 elseif
-  BG == 21 then EMPTY_WRONG()
+  BG == 20 then EMPTY_WRONG()
 gg.toast('🙈 Hidden 🙈')
 elseif
-  BG == 22 then VL_PROMPT()
+  BG == 23 then VL_PROMPT()
 gg.toast('🙈 Hidden 🙈')
 elseif
-  BG == 23 then EMPTY_VL()
+  BG == 24 then EMPTY_VL()
 gg.toast('🙈 Hidden 🙈')
 elseif
-  BG == 24 then EXIT_VL()
+  BG == 25 then EXIT_VL()
 gg.toast('🙈 Hidden 🙈')
 end
 end
