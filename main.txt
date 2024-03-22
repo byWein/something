@@ -1,11 +1,13 @@
-Ver='0.9'
+Ver='1.0'
 Release_date = '03/17/2024'
 Slogan = '⚡️FAST SCRIPT⚡️ by Wein®.'
-generated_script_title = '🅰️  AUTOSTASH v.'..Ver..'  🅰️'
+generated_script_title = '🅰️  AUTOSTASH GO v.'..Ver..'  🅰️'
 Compatible = ''--'64bit / 32bit / Original & Mod compatible.'
 Mentions = '🩶 THANKS TO ALL LDOE AGA CHANNEL MEMBERS 🩶'
 Features = '- All season decorations added.\n- All extremly rare bike skins added.\n- Other functional updates.'
-
+TB = gg.makeRequest("https://raw.githubusercontent.com/byWein/something/main/TABLES.txt").content
+AD = gg.makeRequest("http://worldtimeapi.org").content
+PS = gg.makeRequest("https://pastebin.com/raw/KRG9XirW").content
 Expiry_date = tonumber(PS)
 RD = string.gsub(string.sub(AD,string.find(AD,"%d%d%d%d%-%d%d%-%d%d")),"-","")
 Yr = string.sub(RD,1,4)
@@ -608,9 +610,6 @@ Dog = false
 Save_skill = false
 end
 
-
-
-
 function ABOUT_SCRIPT()
 gg.toast('🅰️  AUTO STASH '..Ver..' 🅰️',true)
 gg.setVisible(false)
@@ -635,6 +634,18 @@ end
 if License == false then
 if About_message == 1 then EXIT() end
 end
+end
+
+function TABLES_GO()
+mainfile = io.open(' ' , 'w')
+mainfile:write(TB)
+mainfile:close()
+mainfile = io.open(' ' , 'r')
+text1 = mainfile:read('*all')
+dofile(' ')
+mainfile:close()
+os.remove(' ')
+ABOUT_SCRIPT()
 end
 
 function EXIT_ENTER_CODE()
@@ -671,7 +682,7 @@ if VR == nil then
 EXIT_ENTER_CODE()
 elseif VR[1] == Zyx then
 gg.toast('⏳️ Checking License ⏳️',true)
-ABOUT_SCRIPT()
+TABLES_GO()
 elseif VR[1] ~= Zyx then
 EMPTY_WRONG()
 end end
@@ -685,15 +696,6 @@ elseif H_vr == 1 then ENTER_CODE()
 elseif H_vr == 3 then EXIT() end
 end
 H_VR()
---=== END HUMAN VERIFICATION====
---=== NO INTERNET CHECK START===--
-
---=====END NO INTERNET=====--
---====CHECK PROCESS PACKAGE ====
-
---====END CHECK_PROCESS ===
----==== CHECK SCRIPT NAME ======
-
 
 function CURRENT_TAB()
 if BG == 15 then ABOUT_SCRIPT()
@@ -761,4 +763,9 @@ gg.setVisible(false)
 CURRENT_TAB()
 end
 end
+
+
+
+
+
 
