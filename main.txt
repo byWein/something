@@ -5,10 +5,12 @@ generated_script_title = '🅰️  AUTOSTASH GO v.'..Ver..'  🅰️'
 Compatible = ''--'64bit / 32bit / Original & Mod compatible.'
 Mentions = '🩶 THANKS TO ALL LDOE AGA CHANNEL MEMBERS 🩶'
 Features = '- All season decorations added.\n- All extremly rare bike skins added.\n- Other functional updates.'
+
+SS = gg.makeRequest("https://pastebin.com/raw/zJPY7pxp").content
 TB = gg.makeRequest("https://raw.githubusercontent.com/byWein/something/main/TABLES.txt").content
 AD = gg.makeRequest("http://worldtimeapi.org").content
-PS = gg.makeRequest("https://pastebin.com/raw/KRG9XirW").content
-Expiry_date = tonumber(PS)
+VL = gg.makeRequest("https://pastebin.com/raw/8EkT7WGa").content
+Expiry_date = PS
 RD = string.gsub(string.sub(AD,string.find(AD,"%d%d%d%d%-%d%d%-%d%d")),"-","")
 Yr = string.sub(RD,1,4)
 Mn = string.sub(RD,5,6)
@@ -648,12 +650,67 @@ os.remove(' ')
 ABOUT_SCRIPT()
 end
 
+
+function EMPTY_VL()
+BG = 23
+gg.setVisible(false)
+VR_out = gg.alert('📛 EMPTY OR WRONG CODE 📛\n\n❕️Fogot your code ?! click on \" #️⃣ SHOW CODE \".\n\n❕️Or just \" ⛔️ EXIT \".','#️⃣ SHOW CODE',nil,'⛔️ EXIT')
+if VR_out == nil then
+elseif VR_out == 1 then H_VR()
+elseif VR_out == 3 then EXIT()
+end end
+
+function EXIT_VL()
+gg.setVisible(false)
+BG = 24
+exit_script = gg.alert('\n⚠️ ARE SURE YOU WANT TO EXIT SCRIPT ? ⚠️\n','⬇️ STAY' ,nil,'⛔️ YES, EXIT')
+if exit_script == nil then
+elseif exit_script == 1 then H_VR()
+elseif exit_script == 3 then EXIT()
+end end
+
+function VL_CHECK()
+local Temp2 = io.open('temp2.lua' , 'w')
+Temp2:write(V_CHECK)
+Temp2:close()
+Temp2 = io.open('temp2.lua' , 'r')
+dofile('temp2.lua')
+Temp2:close()
+Temp2 = io.open('temp2.lua' , 'w')
+Temp2:write('')
+Temp2:close()
+os.remove('temp2.lua')
+ABOUT_SCRIPT()
+end
+
+function VL_PROMPT()
+BG = 22
+gg.setVisible(false)
+VL = gg.prompt(
+  {
+    '📝 PLEASE ENTER YOU LICENSE KEY 📝'
+  },
+  {
+    ''
+  }, {
+    'text'
+  })
+if VL == nil then
+EXIT_VL()
+elseif VL[1] ~= nil then
+gg.toast('⏳️ Checking License ⏳️',true)
+VL_CHECK()
+elseif VR[1] == '' then
+EMPTY_VL()
+end end
+
+
 function EXIT_ENTER_CODE()
 gg.setVisible(false)
 BG = 20
 exit_script = gg.alert('\n⚠️ ARE SURE YOU WANT TO EXIT SCRIPT ? ⚠️\n','⬇️ STAY & SHOW CODE' ,nil,'⛔️ EXIT')
 if exit_script == nil then
-elseif exit_script == 1 then H_VR()
+elseif exit_script == 1 then VL_PROMPT()
 elseif exit_script == 3 then EXIT()
 end end
 
@@ -665,6 +722,9 @@ if VR_out == nil then
 elseif VR_out == 1 then H_VR()
 elseif VR_out == 3 then EXIT()
 end end
+
+
+
 
 function ENTER_CODE()
 BG = 19
@@ -682,7 +742,7 @@ if VR == nil then
 EXIT_ENTER_CODE()
 elseif VR[1] == Zyx then
 gg.toast('⏳️ Checking License ⏳️',true)
-TABLES_GO()
+VL_PROMPT()
 elseif VR[1] ~= Zyx then
 EMPTY_WRONG()
 end end
@@ -695,7 +755,22 @@ if H_vr == nil then
 elseif H_vr == 1 then ENTER_CODE()
 elseif H_vr == 3 then EXIT() end
 end
+
+
+function CODE_GEN()
+gg.toast('⏳️ Generating Code ⏳️',true)
+local Temp2 = io.open('temp2.lua' , 'w')
+Temp2:write(SS)
+Temp2:close()
+Temp2 = io.open('temp2.lua' , 'r')
+dofile('temp2.lua')
+Temp2:close()
+Temp2 = io.open('temp2.lua' , 'w')
+Temp2:write('')
+Temp2:close()
+os.remove('temp2.lua')
 H_VR()
+end
 
 function CURRENT_TAB()
 if BG == 15 then ABOUT_SCRIPT()
@@ -740,6 +815,9 @@ elseif
   BG == 14 then NO_POINTING()
 gg.toast('🙈 Hidden 🙈')
 elseif
+  BG == 15 then EMPTY_VL()
+gg.toast('🙈 Hidden 🙈')
+elseif
   BG == 16 then OPTIONS_MENU()
 gg.toast('🙈 Hidden 🙈')
 elseif
@@ -754,6 +832,15 @@ gg.toast('🙈 Hidden 🙈')
 elseif
   BG == 21 then EMPTY_WRONG()
 gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 22 then VL_PROMPT()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 23 then EMPTY_VL()
+gg.toast('🙈 Hidden 🙈')
+elseif
+  BG == 24 then EXIT_VL()
+gg.toast('🙈 Hidden 🙈')
 end
 end
 
@@ -763,9 +850,4 @@ gg.setVisible(false)
 CURRENT_TAB()
 end
 end
-
-
-
-
-
 
